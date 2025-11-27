@@ -1,0 +1,317 @@
+@import url(../../Global/Global.css);
+
+.Contatos {
+  position: relative;
+  width: 100%;
+  height: 1200px;
+
+  background: var(--Degrade);
+
+  overflow: hidden;
+
+  & .Divisor {
+    position: absolute;
+    width: 800px;
+    left: -500px;
+    top: -3px;
+  }
+}
+
+.Mensage {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 28px;
+
+  position: absolute;
+  width: calc(100% - 16px);
+  height: auto;
+  left: calc(50% - (100% - 16px) / 2);
+  top: 100px;
+
+  & h1 {
+    width: 95%;
+    height: auto;
+
+    font-family: var(--font-poppins);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 53px;
+
+    color: var(--Branco);
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+
+    & span {
+      font-weight: 700;
+    }
+  }
+
+  & p {
+    width: 100%;
+    height: auto;
+
+    font-family: var(--font-poppins);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+
+    color: var(--Branco);
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+
+    & span {
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.Form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 15px;
+
+  position: absolute;
+  width: calc(100% - 32px);
+  height: auto;
+  left: calc(50% - (100% - 32px) / 2);
+  top: 850px;
+
+  & .input {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 12px 0px 16px;
+    gap: 31px;
+
+    width: 100%;
+    height: 60px;
+
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(244, 244, 244, 0.6);
+    backdrop-filter: blur(2px);
+    border-radius: 16px;
+    color: var(--Branco);
+    font-size: 16px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+
+  & .input::placeholder {
+    font-family: var(--font-poppins);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: var(--Branco);
+  }
+
+  & .input:focus {
+    outline: none;
+    border: 1px solid var(--Branco);
+  }
+
+  .Button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 0px 8px 24px;
+    gap: 44px;
+
+    width: 100%;
+    height: 60px;
+
+    background: linear-gradient(93.33deg, #f4f4f4 0%, #e8e8e8 100%);
+    border-radius: 44px;
+    border: none;
+    cursor: pointer;
+
+    flex: none;
+    order: 3;
+    align-self: stretch;
+    flex-grow: 0;
+
+    font-family: var(--font-plus);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: var(--Preto);
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+    & .Icon {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 15.5868px;
+      gap: 15.59px;
+
+      width: 52px;
+      height: 52px;
+
+      background: var(--RoxoPrimario);
+      border-radius: 100%;
+
+      flex: none;
+      order: 1;
+      flex-grow: 0;
+
+      & img {
+        width: auto;
+        height: 20px;
+      }
+    }
+  }
+}
+
+/* Responsivo */
+
+/* TABLET (768px a 1023px) */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .Contatos {
+    height: 1020px;
+
+    & .Divisor {
+      left: -280px;
+    }
+  }
+
+  .Mensage {
+    gap: 28px;
+
+    width: calc(100% - 220px);
+    left: 78px;
+    top: 100px;
+
+    & h1 {
+      font-size: 40px;
+      line-height: 48px;
+    }
+
+    & p {
+      width: 90%;
+    }
+  }
+
+  .Form {
+    width: calc(100% - 400px);
+    left: 78px;
+    top: 620px;
+
+    .Button {
+      gap: 124px;
+    }
+  }
+}
+
+/* DESKTOP / NOTEBOOK (≥1024px) */
+
+@media (min-width: 1024px) {
+  .Contatos {
+    height: 730px;
+
+    & .Divisor {
+      left: -280px;
+    }
+  }
+
+  .Mensage {
+    gap: 24px;
+
+    width: 700px;
+    left: 64px;
+    top: calc(50% - 480px / 2);
+
+    & h1 {
+      font-size: 52px;
+      line-height: 68px;
+    }
+  }
+
+  .Form {
+    width: 400px;
+    left: 800px;
+    top: calc(50% - 285px / 2);
+
+    .Button {
+      padding: 8px 0px 8px 24px;
+      gap: 40px;
+
+      font-size: 20px;
+      line-height: 25px;
+    }
+  }
+}
+
+/* TELAS GRANDES (≥1700px) */
+
+@media (min-width: 1700px) {
+  .Contatos {
+    height: 745px;
+
+    & .Divisor {
+      left: 0;
+    }
+  }
+
+  .Mensage {
+    gap: 31px;
+
+    width: 910px;
+    left: 205px;
+    top: calc(50% - 456px / 2);
+
+    & h1 {
+      font-size: 60px;
+      line-height: 74px;
+    }
+
+    & p {
+      font-size: 28px;
+      line-height: 46px;
+    }
+  }
+
+  .Form {
+    width: 400px;
+    left: 1320px;
+    top: calc(50% - 285px / 2);
+    
+    .Button {
+      padding: 8px 0px 8px 24px;
+      gap: 40px;
+
+      font-size: 20px;
+      line-height: 25px;
+    }
+  }
+}

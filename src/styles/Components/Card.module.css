@@ -1,0 +1,152 @@
+@import url(../Global/Global.css);
+
+.Card {
+  box-sizing: border-box;
+
+  position: relative;
+  width: calc(100% - 16px);
+  height: 469px;
+
+  background: var(--Preto);
+  border: 2px solid rgba(250, 244, 244, 0.1);
+  border-radius: 28px;
+}
+
+.contentArea {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 20px;
+
+  position: absolute;
+  width: calc(100% - 32px);
+  height: auto;
+  left: calc(50% - (100% - 32px) / 2);
+  top: 32px;
+
+  & .title {
+    width: 100%;
+    height: auto;
+
+    font-family: var(--font-poppins);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 40px;
+
+    color: var(--Branco);
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+
+    & .highlight {
+      color: var(--RoxoPrimario);
+      font-weight: 700;
+    }
+  }
+
+  & .description {
+    width: 100%;
+    height: auto;
+
+    font-family: var(--font-poppins);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+
+    color: var(--Branco);
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+  }
+}
+
+.Btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 12px 16px 12px 12px;
+  gap: 15.78px;
+
+  position: absolute;
+  width: 260px;
+  height: 44px;
+  right: 12px;
+  bottom: 12px;
+
+  background: var(--Degrade);
+  border-radius: 24px;
+  border: none;
+
+  font-family: var(font-plus);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: var(--Branco);
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+
+  & .IconArrow {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+/* Responsivo */
+
+/* TABLET (768px a 1023px) */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .contentArea {
+    width: calc(100% - 64px);
+    left: calc(50% - (100% - 64px) / 2);
+  }
+}
+/* DESKTOP / NOTEBOOK (≥1024px) */
+
+@media (min-width: 1024px) {
+  .Card {
+    width: calc(100% - 600px);
+    height: 420px;
+  }
+
+  .contentArea {
+    width: calc(100% - 36px);
+    left: calc(50% - (100% - 36px) / 2);
+
+    & .description {
+      width: 90%;
+    }
+  }
+}
+
+/* TELAS GRANDES (≥1700px) */
+
+@media (min-width: 1700px) {
+  .Card {
+    width: calc(100% - 867px);
+    height: 469px;
+  }
+
+  .contentArea {
+    width: calc(100% - 120px);
+    left: calc(50% - (100% - 120px) / 2);
+
+    & .description {
+      width: 90%;
+    }
+  }
+}

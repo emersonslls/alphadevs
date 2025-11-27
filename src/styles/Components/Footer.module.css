@@ -1,0 +1,563 @@
+@import url(../Global/Global.css);
+
+.footer {
+  position: relative;
+  width: 100%;
+  height: 760px;
+  overflow: hidden;
+  background: var(--Preto);
+
+  & .DivisorFooter {
+    position: absolute;
+    width: 300px;
+    height: 80px;
+    left: calc(50% - 300px / 2);
+    top: -33px;
+    z-index: 2;
+  }
+
+  & .DetailBack {
+    box-sizing: border-box;
+    position: absolute;
+    width: 652.94px;
+    height: 583px;
+    left: -54px;
+    top: calc(50% - 583px / 2 + 113px);
+    opacity: 0.6;
+    z-index: 1; /* Fica atrás do texto */
+    pointer-events: none; /* Permite clicar no menu mesmo se o SVG estiver por cima */
+  }
+}
+
+.Logo {
+  display: flex;
+  position: absolute;
+  width: auto;
+  height: 36px;
+  left: 16px;
+  top: 100px;
+  z-index: 10;
+}
+
+.navegacao {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 16px;
+  position: absolute;
+  width: auto;
+  height: auto;
+  left: 16px;
+  top: 155px;
+  z-index: 10;
+}
+
+.navLinksFooter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px;
+  margin: 0; /* Remove margem padrão do navegador */
+  gap: 16px;
+  list-style: none; /* Remove as bolinhas da lista */
+}
+
+.navLinksFooter li {
+  width: auto;
+  height: 28px;
+  font-family: var(--font-poppins);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: var(--Branco);
+  cursor: pointer;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.navLinksFooter li:hover {
+  border-bottom: 3px solid var(--RoxoPrimario);
+}
+
+.Politic {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 16px;
+
+  position: absolute;
+  width: auto;
+  height: auto;
+  left: 16px;
+  top: 390px;
+
+  & h1 {
+    width: auto;
+    height: 11px;
+
+    font-family: var(--font-poppins);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    leading-trim: both;
+    text-edge: cap;
+    display: flex;
+    align-items: center;
+
+    color: var(--Cinza);
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+}
+
+.Redes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
+
+  position: absolute;
+  width: auto;
+  height: auto;
+  left: 16px;
+  top: 520px;
+
+  & h1 {
+    width: auto;
+    height: 30px;
+
+    font-family: var(--font-poppins);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+
+    color: var(--Branco);
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+  }
+
+  & IconsRedes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 9.6px;
+
+    width: auto;
+    height: 32px;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+    & .Icon {
+      width: auto;
+      height: 32px;
+
+      flex: none;
+      order: 1;
+      flex-grow: 0;
+    }
+  }
+}
+
+.Rodape {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 100%;
+  height: 130px;
+  bottom: 0;
+
+  background: var(--Preto);
+
+  z-index: 9;
+
+  & h1 {
+    position: absolute;
+    width: 267px;
+    height: 48px;
+    left: calc(50% - 267px / 2);
+    top: calc(50% - 48px / 2 - 19.5px);
+
+    font-family: var(--font-poppins);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: var(--Cinza);
+  }
+
+  & .Dev {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+
+    position: absolute;
+    width: 237px;
+    height: 24px;
+    left: calc(50% - 237px / 2);
+    top: 82px;
+
+    & p {
+      width: auto;
+      height: 24px;
+
+      font-family: var(--font-poppins);
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      display: flex;
+      align-items: center;
+
+      color: var(--Cinza);
+
+      flex: none;
+      order: 0;
+      flex-grow: 0;
+    }
+  }
+}
+
+.Rodape::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  /* Altura da "borda" */
+  background: linear-gradient(
+    to right,
+    #0f0f0f00 0%,
+    #9e6ee5 50%,
+    #0f0f0f00 100%
+  );
+  z-index: 9;
+}
+
+/* TABLET (768px a 1023px) */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .footer {
+    height: 760px;
+
+    & .DivisorFooter {
+      position: absolute;
+      width: 700px;
+      height: 80px;
+      left: calc(50% - 700px / 2);
+      top: -24px;
+    }
+
+    & .DetailBack {
+      box-sizing: border-box;
+      position: absolute;
+      width: 652.94px;
+      height: 583px;
+      left: -5px;
+      top: calc(50% - 583px / 2 + 13px);
+      opacity: 0.6;
+      z-index: 1; /* Fica atrás do texto */
+      pointer-events: none; /* Permite clicar no menu mesmo se o SVG estiver por cima */
+    }
+  }
+
+  .Logo {
+    width: auto;
+    height: 36px;
+    left: 72px;
+    top: 100px;
+    z-index: 10;
+  }
+
+  .navegacao {
+    display: flex;
+    gap: 16px;
+    position: absolute;
+    width: auto;
+    height: auto;
+    left: 72px;
+    top: 180px;
+    z-index: 10;
+  }
+
+  .Politic {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+
+    position: absolute;
+    width: auto;
+    height: auto;
+    left: calc(50% - 443px / 2);
+    top: 450px;
+  }
+
+  .Redes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+
+    position: absolute;
+    width: auto;
+    height: auto;
+    left: calc(50% - 135px / 2);
+    top: 510px;
+  }
+}
+
+/* DESKTOP / NOTEBOOK (≥1024px) */
+
+@media (min-width: 1024px) {
+  .footer {
+    height: 500px;
+
+    & .DivisorFooter {
+      position: absolute;
+      width: 1000px;
+      height: 80px;
+      left: calc(50% - 1000px / 2);
+      top: -19px;
+      z-index: 2;
+    }
+
+    & .DetailBack {
+      width: 652.94px;
+      height: 583px;
+      left: 554px;
+      top: calc(50% - 583px / 2 + 13px);
+    }
+  }
+
+  .Logo {
+    top: 100px;
+    left: 120px;
+  }
+
+  .navegacao {
+    display: flex;
+    gap: 8px;
+    position: absolute;
+    width: auto;
+    height: auto;
+    left: 120px;
+    top: 160px;
+    z-index: 10;
+  }
+
+  .navLinksFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    margin: 0; /* Remove margem padrão do navegador */
+    gap: 8px;
+    list-style: none; /* Remove as bolinhas da lista */
+  }
+
+  .Politic {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+
+    position: absolute;
+    width: auto;
+    height: auto;
+    left: calc(50% - 443px / 2);
+    top: 380px;
+  }
+
+  .Redes {
+    position: absolute;
+    width: auto;
+    height: auto;
+    left: calc(50% - 135px / 2 + 450px);
+    top: 100px;
+  }
+
+  .Rodape {
+    height: 80px;
+
+    & h1 {
+      position: absolute;
+      width: auto;
+      height: 48px;
+      left: 120px;
+      top: calc(50% - 48px / 2);
+    }
+
+    & .Dev {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 0px;
+      gap: 8px;
+
+      position: absolute;
+      width: 237px;
+      height: 24px;
+      left: calc(50% - 237px / 2 + 420px);
+      top: calc(50% - 24px / 2);
+
+      & p {
+        width: auto;
+        height: 24px;
+
+        font-family: var(--font-poppins);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        display: flex;
+        align-items: center;
+
+        color: var(--Cinza);
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+      }
+    }
+  }
+}
+
+/* TELAS GRANDES (≥1700px) */
+
+@media (min-width: 1700px) {
+  .footer {
+    height: 500px;
+
+    & .DivisorFooter {
+      position: absolute;
+      width: 1000px;
+      height: 80px;
+      left: calc(50% - 1000px / 2);
+      top: -19px;
+      z-index: 2;
+    }
+
+    & .DetailBack {
+      width: 652.94px;
+      height: 583px;
+      left: 554px;
+      top: calc(50% - 583px / 2 + 13px);
+    }
+  }
+
+  .Logo {
+    top: 100px;
+    left: 205px;
+  }
+
+  .navegacao {
+    display: flex;
+    gap: 8px;
+    position: absolute;
+    width: auto;
+    height: auto;
+    left: 205px;
+    top: 160px;
+    z-index: 10;
+  }
+
+  .navLinksFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    margin: 0; /* Remove margem padrão do navegador */
+    gap: 8px;
+    list-style: none; /* Remove as bolinhas da lista */
+  }
+
+  .Politic {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+
+    position: absolute;
+    width: auto;
+    height: auto;
+    left: calc(50% - 443px / 2);
+    top: 380px;
+  }
+
+  .Redes {
+    position: absolute;
+    width: auto;
+    height: auto;
+    left: 1579px;
+    top: 100px;
+  }
+
+  .Rodape {
+    height: 80px;
+
+    & h1 {
+      position: absolute;
+      width: auto;
+      height: 48px;
+      left: 205px;
+      top: calc(50% - 48px / 2);
+    }
+
+    & .Dev {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 0px;
+      gap: 8px;
+
+      position: absolute;
+      width: 237px;
+      height: 24px;
+      left: 1472px;
+      top: calc(50% - 24px / 2);
+
+    }
+  }
+}

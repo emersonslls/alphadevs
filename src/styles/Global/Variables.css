@@ -1,0 +1,41 @@
+/* <----- VARIAVEIS -----> */
+:root {
+  /* CORES */
+  --Preto: #0d0d0d;
+  --Cinza: #727375;
+  --CinzaClaro: #e8e8e8;
+  --RoxoPrimario: #9e6ee5;
+  --RosaClaro: #fa75f8;
+  --Branco: #faf4f4;
+  --Degrade: linear-gradient(179.01deg, #fa75f8 19.03%, #9e6ee5 119.37%);
+
+  /* FONTES */
+  --font-poppins: "Poppins", sans-serif;
+  --font-plus: "Plus Jakarta Sans", sans-serif;
+
+  /* TAMANHOS DA FONTE */
+  --font-size-base: 16px;
+  --font-size-lg: 24px;
+  --font-size-md: 20px;
+  --font-size-sm: 18px;
+  --font-size-xs: 14px;
+  --font-size-xxs: 12px;
+}
+
+/* SCROLLBAR */
+
+/* Largura */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Fundo */
+::-webkit-scrollbar-track {
+  background-color: var(--Preto);
+}
+
+/* Scroll */
+::-webkit-scrollbar-thumb {
+  background: var(--Azul);
+  border-radius: 25px;
+}

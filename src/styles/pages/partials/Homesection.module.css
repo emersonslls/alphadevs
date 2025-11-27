@@ -1,0 +1,433 @@
+@import url(../../Global/Global.css);
+
+.Home {
+    position: relative;
+    width: 100%;
+    height: 950px;
+
+    background: var(--Branco);
+
+    overflow: hidden;
+
+    & .svg {
+        box-sizing: border-box;
+
+        position: absolute;
+        width: 537.54px;
+        height: 512px;
+        left: 5px;
+        top: calc(50% - 512px/2 + 228.5px);
+    }
+
+    & p {
+        position: absolute;
+        width: 204px;
+        height: 30px;
+        left: calc(50% - 204px/2);
+        top: 110px;
+
+        font-family: var(--font-poppins);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: 8px;
+        text-transform: uppercase;
+
+        color: var(--Cinza);
+    }
+
+    & .line {
+        position: absolute;
+        width: calc(100% - 100px);
+        height: 0px;
+        left: 8px;
+        margin-top: 1px;
+        top: 650px;
+
+        border: 1px solid var(--Cinza);
+    }
+}
+
+.Titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 21px;
+
+    position: absolute;
+    width: calc(100% - 16px);
+    height: auto;
+    left: calc(50% - calc(100% - 16px)/2);
+    top: 150px;
+
+    & h1 {
+        width: 100%;
+        height: 224px;
+
+        font-family: var(--font-poppins);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 56px;
+
+        color: var(--Preto);
+
+        flex: none;
+        order: 0;
+        align-self: stretch;
+        flex-grow: 0;
+
+        & span {
+            font-weight: 700;
+        }
+    }
+
+    & h2 {
+        width: 100%;
+        height: 216px;
+
+        font-family: var(--font-poppins);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 36px;
+
+        color: var(--Cinza);
+
+        flex: none;
+        order: 1;
+        align-self: stretch;
+        flex-grow: 0;
+
+        & span {
+            font-weight: 600;
+        }
+    }
+}
+
+.Btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 8px 8px 24px;
+    gap: 15px;
+
+    position: absolute;
+    width: 297px;
+    height: 56px;
+    left: 8px;
+    top: 700px;
+
+    background: var(--Degrade);
+    border-radius: 44px;
+    border: none;
+    cursor: pointer;
+
+    font-family: var(--font-plus);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: var(--Branco);
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+    & .IconArrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        width: 40px;
+        height: 40px;
+
+        background: var(--Branco);
+        border-radius: 100%;
+
+        transition: transform 0.3s ease;
+
+        & img {
+            width: 12px;
+            height: 12px;
+
+            transform: rotate(90deg);
+        }
+    }
+
+    &:hover .IconArrow {
+        transform: rotate(-45deg);
+    }
+}
+
+.Btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 50%;
+    height: 100%;
+
+    background: linear-gradient(120deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.4) 50%,
+            rgba(255, 255, 255, 0) 100%);
+
+    opacity: 0.50;
+    transform: skewX(-20deg);
+    pointer-events: none;
+}
+
+.Btn:hover::before {
+    animation: shine 1.5s infinite;
+    opacity: 1;
+}
+
+@keyframes shine {
+    0% {
+        left: -75%;
+    }
+
+    100% {
+        left: 125%;
+    }
+}
+
+/* Responsivo */
+
+/* TABLET (768px a 1023px) */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .Home {
+        height: 1060px;
+
+        & .svg {
+            width: 821px;
+            height: 782px;
+            left: 55px;
+            top: calc(50% - 821px/2 + 210px);
+        }
+
+        & p {
+            top: 100px;
+        }
+
+        & .line {
+            width: calc(100% - 210px);
+            left: 48px;
+            margin-top: 16px;
+            top: 690px;
+        }
+    }
+
+    .Titulo {
+        gap: 30px;
+
+        position: absolute;
+        width: calc(100% - 100px);
+        left: calc(50% - calc(100% - 100px)/2);
+        top: 180px;
+
+        & h1 {
+            height: auto;
+
+            font-size: 64px;
+            line-height: 84px;
+        }
+
+        & h2 {
+            width: 650px;
+            height: auto;
+
+            font-size: 24px;
+            line-height: 36px;
+        }
+    }
+
+    .Btn {
+        padding: 12px 12px 12px 32px;
+        gap: 19.29px;
+
+        width: 375px;
+        height: 72px;
+        top: 760px;
+        left: 44px;
+
+        border-radius: 56px;
+
+        font-size: 20px;
+        line-height: 26px;
+
+        & .IconArrow {
+            width: 52px;
+            height: 52px;
+
+            & img {
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+}
+
+/* DESKTOP / NOTEBOOK (≥1024px) */
+
+@media (min-width: 1024px) {
+    .Home {
+        height: 780px;
+
+        & .svg {
+            width: 700px;
+            height: 670px;
+            left: 600px;
+            top: calc(50% - 670px/2 + 100px);
+        }
+
+        & p {
+            width: 229px;
+            height: 36px;
+            left: 64px;
+            top: 120px;
+        }
+
+        & .line {
+            width: calc(100% - 50%);
+            left: 64px;
+            margin-top: 16px;
+            top: 560px;
+        }
+    }
+
+    .Titulo {
+        gap: 30px;
+
+        width: 800px;
+        left: 64px;
+        top: 144px;
+
+        & h1 {
+            height: auto;
+
+            font-size: 64px;
+            line-height: 84px;
+        }
+
+        & h2 {
+            width: 650px;
+            height: auto;
+
+            font-size: 24px;
+            line-height: 36px;
+        }
+    }
+
+    .Btn {
+        padding: 8px 8px 8px 24px;
+        gap: 15px;
+
+        width: 347px;
+        height: 60px;
+        left: 64px;
+        top: 610px;
+
+        font-size: 20px;
+        line-height: 25px;
+
+        & .IconArrow {
+            width: 44px;
+            height: 44px;
+
+            & img {
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+}
+
+/* TELAS GRANDES (≥1700px) */
+
+@media (min-width: 1700px) {
+    .Home {
+        height: 937px;
+
+        & .svg {
+            box-sizing: border-box;
+
+            position: absolute;
+            width: 1094px;
+            height: 1042.03px;
+            left: 877px;
+            top: calc(50% - 1042.03px/2 - 0.49px);
+        }
+
+        & p {
+            width: 229px;
+            height: 36px;
+            left: 204px;
+            top: 165px;
+
+            font-size: 24px;
+            line-height: 36px;
+        }
+
+        & .line {
+            width: calc(100% - 65%);
+            left: 204px;
+            margin-top: 16px;
+            top: 710px;
+        }
+    }
+
+    .Titulo {
+        gap: 10px;
+
+        width: 922px;
+        height: 502px;
+        left: 204px;
+        top: 191px;
+
+        & h1 {
+            width: 922px;
+            height: 324px;
+
+            font-size: 76px;
+            line-height: 108px;
+        }
+
+        & h2 {
+            width: 684px;
+            height: 168px;
+
+            font-size: 28px;
+            line-height: 42px;
+        }
+    }
+
+    .Btn {
+        padding: 8px 8px 8px 24px;
+        gap: 15px;
+
+        width: 347px;
+        height: 60px;
+        left: 204px;
+        top: 770px;
+
+        font-size: 20px;
+        line-height: 25px;
+
+        & .IconArrow {
+           
+            & img {
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+}
